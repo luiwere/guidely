@@ -1,0 +1,26 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+nav button {
+  margin-right: 0.5rem;
+}
+
+.error-banner {
+  background: #fdecea;
+  color: #b3261e;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.status-banner {
+  background: #e6f4ea;
+  color: #1e7e34;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
