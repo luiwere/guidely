@@ -1,11 +1,15 @@
 import os
 import shutil
+import uuid
 from fastapi import APIRouter, UploadFile, File, HTTPException
 
 from utils import extract_text, chunk_text
+from embeddings import embed_texts
+from vector_store import VectorStore
 
 router = APIRouter()
 UPLOAD_DIR = "data/sample-docs"
+store = VectorStore()
 
 
 @router.post("/upload")
@@ -24,11 +28,20 @@ async def upload_document(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail="failed to process file")
 
     chunks = chunk_text(text)
-    # TODO: embed chunks, persist to vector DB
+    if not chunks:
+        raise HTTPException(status_code=400, detail="no content extracted from file")
+
+    embeddings = embed_texts(chunks)
+    metadata = [
+        {"doc_id": str(uuid.uuid4()), "file": file.filename, "text": chunk}
+        for chunk in chunks
+    ]
+    store.add(embeddings, metadata)
+
     return {"filename": file.filename, "chunks_created": len(chunks)}
 
 
 @router.post("/reindex")
 async def reindex():
-    # TODO: re-run embedding pipeline, skip unchanged files
+    # TODO: walk UPLOAD_DIR, skip files whose content hash is unchanged
     raise HTTPException(status_code=501, detail="not implemented")
