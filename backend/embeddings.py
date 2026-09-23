@@ -2,6 +2,7 @@ from typing import List
 from openai import OpenAI
 
 from config import OPENAI_API_KEY, EMBEDDING_MODEL
+from logging_utils import record_cache
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -19,9 +20,11 @@ def embed_texts(texts: List[str]) -> List[List[float]]:
         key = hash(text)
         if key in _cache:
             results[i] = _cache[key]
+            record_cache(hit=True)
         else:
             to_embed.append(text)
             to_embed_idx.append(i)
+            record_cache(hit=False)
 
     if to_embed:
         response = client.embeddings.create(model=EMBEDDING_MODEL, input=to_embed)
