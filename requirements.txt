@@ -5,3 +5,4 @@ pydantic
 openai
 faiss-cpu
 python-dotenv
+fastembed

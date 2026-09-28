@@ -1,17 +1,25 @@
 from typing import List
-from openai import OpenAI
 
-from config import OPENAI_API_KEY, EMBEDDING_MODEL
+from fastembed import TextEmbedding
+
+from config import EMBEDDING_MODEL
 from logging_utils import record_cache
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+_model = None
 
 # in-memory cache: text hash -> embedding, avoids re-embedding unchanged chunks
-_cache: dict[str, List[float]] = {}
+_cache: dict[int, List[float]] = {}
+
+
+def _get_model() -> TextEmbedding:
+    global _model
+    if _model is None:
+        _model = TextEmbedding(EMBEDDING_MODEL)  # downloads once, then cached on disk
+    return _model
 
 
 def embed_texts(texts: List[str]) -> List[List[float]]:
-    """Embed a list of texts, using the cache for anything already seen."""
+    """Embed a list of texts locally, using the cache for anything already seen."""
     results: List[List[float] | None] = [None] * len(texts)
     to_embed = []
     to_embed_idx = []
@@ -27,9 +35,10 @@ def embed_texts(texts: List[str]) -> List[List[float]]:
             record_cache(hit=False)
 
     if to_embed:
-        response = client.embeddings.create(model=EMBEDDING_MODEL, input=to_embed)
-        for idx, item in zip(to_embed_idx, response.data):
-            _cache[hash(texts[idx])] = item.embedding
-            results[idx] = item.embedding
+        vectors = list(_get_model().embed(to_embed))
+        for idx, vec in zip(to_embed_idx, vectors):
+            emb = vec.tolist()
+            _cache[hash(texts[idx])] = emb
+            results[idx] = emb
 
     return results  # type: ignore
