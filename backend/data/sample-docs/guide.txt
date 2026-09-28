@@ -1,0 +1,16 @@
+ACME GETTING STARTED GUIDE
+
+Step 1: Create Your Workspace
+After signing up, you will be prompted to create a workspace. Choose a name that your team will recognize. The workspace name can be changed later in Settings > General.
+
+Step 2: Connect Your Data Source
+Go to Integrations and select your data source (PostgreSQL, MySQL, or CSV upload). For databases, provide the host, port, database name, and read-only credentials. We recommend creating a dedicated read-only user for Acme.
+
+Step 3: Build Your First Dashboard
+Click New Dashboard, then drag charts from the left panel onto the canvas. Each chart needs a data source and a query. Use the visual query builder if you are not comfortable with SQL.
+
+Step 4: Share With Your Team
+Click Share in the top right of any dashboard. You can share with specific team members or generate a public link. Public links can be password protected and set to expire.
+
+Step 5: Set Up Alerts
+Open any chart, click the bell icon, and set a threshold. Alerts can be sent by email or Slack. Alert checks run every 15 minutes on the Starter plan and every 5 minutes on Pro and Enterprise.
