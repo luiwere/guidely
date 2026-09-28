@@ -5,3 +5,6 @@ node_modules/
 dist/
 backend/data/index.faiss
 backend/venv/
+backend/data/index.faiss.meta.pkl
+backend/data/file_hashes.json
+backend/data/query_log.csv
