@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import documents, search, metrics
+from routes import documents, search, metrics, export
 
 app = FastAPI(title="Guidely")
 
