@@ -1,0 +1,16 @@
+ACME NEW EMPLOYEE ONBOARDING
+
+Week 1: Setup
+On your first day, you will receive a laptop and accounts for email, Slack, and the internal wiki. Complete the security training within your first 3 days. Your manager will schedule a welcome meeting and introduce you to your team.
+
+Working Hours and Leave
+Core working hours are 10:00 to 16:00 in your local time zone. Full-time employees receive 21 days of paid annual leave, 10 days of sick leave, and public holidays. Leave requests are submitted in the HR portal and approved by your manager.
+
+Expenses
+Work-related expenses under 100 USD do not need pre-approval. Larger expenses need manager approval before purchase. Submit receipts through the HR portal within 30 days to be reimbursed.
+
+Equipment
+Employees may choose a laptop from the approved list. Equipment must be returned within 7 days of leaving the company. Lost or stolen equipment must be reported to IT immediately.
+
+Support Rotation
+Support engineers join the on-call rotation after their first month. On-call shifts last one week, with a handover meeting every Monday at 09:30.
