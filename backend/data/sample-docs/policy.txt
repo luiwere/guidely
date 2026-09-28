@@ -1,0 +1,13 @@
+ACME SUPPORT POLICY
+
+Section 1: Refund Policy
+Customers may request a full refund within 30 days of purchase. After 30 days, refunds are only issued for verified service outages lasting more than 24 hours. Refund requests must be submitted through the support portal and are processed within 5 business days. Refunds are returned to the original payment method.
+
+Section 2: Data Retention
+Customer data is retained for 12 months after account closure. After that period, all personal data is permanently deleted. Customers can request early deletion by emailing privacy@acme.example. Deletion requests are completed within 14 days.
+
+Section 3: Service Level Agreement
+Acme guarantees 99.9% monthly uptime for paid plans. If uptime falls below this threshold, affected customers receive a service credit of 10% of their monthly fee per full hour of downtime beyond the guarantee, capped at 100% of the monthly fee.
+
+Section 4: Acceptable Use
+Customers may not use the service to send spam, host illegal content, or attempt to access other customers' data. Violations may result in immediate account suspension without refund.
