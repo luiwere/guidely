@@ -1,0 +1,16 @@
+ACME SECURITY OVERVIEW
+
+Encryption
+All data is encrypted in transit using TLS 1.3 and at rest using AES-256. Database backups are encrypted with separate keys that are rotated every 90 days.
+
+Authentication
+Acme supports email/password login, Google sign-in, and SAML single sign-on for Enterprise customers. Two-factor authentication (2FA) via authenticator app is available to all plans and can be enforced organization-wide by admins.
+
+Access Controls
+Roles include Viewer, Editor, and Admin. Viewers can see dashboards but not edit them. Editors can create and modify dashboards. Admins manage billing, team members, and integrations. Enterprise customers can define custom roles.
+
+Incident Response
+Security incidents are triaged within 1 hour of detection. Affected customers are notified within 72 hours of confirmation of a breach. A post-incident report is published within 14 days.
+
+Compliance
+Acme is SOC 2 Type II certified and GDPR compliant. Audit reports are available to Enterprise customers under NDA.
