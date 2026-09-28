@@ -1,0 +1,16 @@
+ACME FREQUENTLY ASKED QUESTIONS
+
+Q: How do I reset my password?
+A: Click "Forgot password" on the login page and enter your account email. You will receive a reset link that expires after 1 hour. If you do not receive it, check your spam folder or contact support.
+
+Q: How do I change my billing plan?
+A: Go to Settings > Billing > Change Plan. Upgrades take effect immediately and are prorated. Downgrades take effect at the start of the next billing cycle.
+
+Q: Can I add more team members?
+A: Yes. Admins can invite members from Settings > Team. The Starter plan supports up to 5 members, the Pro plan up to 25, and the Enterprise plan is unlimited.
+
+Q: Which payment methods are accepted?
+A: We accept Visa, Mastercard, American Express, and M-Pesa. Enterprise customers can also pay by bank transfer with a purchase order.
+
+Q: How do I contact support?
+A: Use the in-app chat (available 24/7) or email support@acme.example. Pro and Enterprise customers get priority response within 2 hours.
