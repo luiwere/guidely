@@ -3,12 +3,11 @@ from pydantic import BaseModel
 
 from models.record import AnswerResponse, Source
 from embeddings import embed_texts
-from vector_store import VectorStore
+from vector_store import store
 from llm import generate_answer
 from logging_utils import track_latency, record_failure
 
 router = APIRouter()
-store = VectorStore()
 
 
 class QueryRequest(BaseModel):

@@ -40,3 +40,6 @@ class VectorStore:
         faiss.write_index(self.index, VECTOR_DB_PATH)
         with open(_metadata_path, "wb") as f:
             pickle.dump(self.metadata, f)
+
+
+store = VectorStore()
